@@ -6,9 +6,10 @@ class Funcionario:
 
 class Gerente(Funcionario): 
 
-    def __init__(self, senha, qtd_funcionarios): 
+    def __init__(self, senha, qtd_funcionarios, nome, cpf, salario): 
         self._senha = senha 
         self._qtd_funcionarios = qtd_funcionarios 
+        Funcionario.__init__(self, nome, cpf, salario)
 
     def autentica(self, senha): 
         if self._senha == senha: 
